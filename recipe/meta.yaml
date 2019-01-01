@@ -18,18 +18,19 @@ build:
 
 requirements:
   build:
-    - toolchain
-    - openssl 1.0.*
-    - ncurses 5.9.*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - {{ compiler('c') }}
+  host:
+    - openssl
+    - ncurses
+    - zlib
+    - bzip2
 # needs libidn11 in conda-forge (also disabled in build.sh)
 #    - libidn
   run:
-    - openssl 1.0.*
-    - ncurses 5.9.*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - openssl
+    - ncurses
+    - zlib
+    - bzip2
 #    - libidn
 
 test:
