@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   # needs curses.h, not avail on win
   skip: True  # [win]
 
