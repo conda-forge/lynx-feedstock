@@ -1,6 +1,6 @@
 {% set name = "lynx" %}
-{% set version = "2.8.8" %}
-{% set sha256 = "6980e75cf0d677fd52c116e2e0dfd3884e360970c88c8356a114338500d5bee7" %}
+{% set version = "2.8.9.1" %}
+{% set sha256 = "387f193d7792f9cfada14c60b0e5c0bff18f227d9257a39483e14fa1aaf79595" %}
 
 package:
   name: {{ name|lower }}
@@ -8,28 +8,29 @@ package:
 
 source:
   fn: lynx2.8.8rel.2.tar.bz2
-  url: http://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.8rel.2.tar.bz2
+  url: http://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.9rel.1.tar.bz2
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1001
   # needs curses.h, not avail on win
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain
-    - openssl 1.0.*
-    - ncurses 5.9.*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - {{ compiler('c') }}
+  host:
+    - openssl
+    - ncurses
+    - zlib
+    - bzip2
 # needs libidn11 in conda-forge (also disabled in build.sh)
 #    - libidn
   run:
-    - openssl 1.0.*
-    - ncurses 5.9.*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - openssl
+    - ncurses
+    - zlib
+    - bzip2
 #    - libidn
 
 test:
