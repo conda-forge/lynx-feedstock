@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 1003
   # needs curses.h, not avail on win
   skip: True  # [win]
 
@@ -35,8 +35,6 @@ requirements:
 
 test:
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
     - lynx -dump http://google.com
     - lynx -dump https://google.com
 
