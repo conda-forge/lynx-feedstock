@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make
   host:
     - openssl
@@ -39,7 +40,7 @@ test:
 
 about:
   home: http://invisible-island.net/lynx/
-  license: GPL-2.0
+  license: GPL-2.0-only
   license_family: GPL
   license_file: COPYING
   summary: 'Text-based web browser'
