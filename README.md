@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lynx-feedstock/
 
 Home: http://invisible-island.net/lynx/
 
-Package license: GPL-2.0
+Package license: GPL-2.0-only
 
 Summary: Text-based web browser
 
