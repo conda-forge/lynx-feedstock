@@ -17,7 +17,6 @@ esac
     --with-zlib \
     --with-bzlib \
     --enable-ipv6 \
-    --disable-idna \
     --with-ssl="$PREFIX" \
     --with-screen=ncurses \
     || (cat config.log; false)

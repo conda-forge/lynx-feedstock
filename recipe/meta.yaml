@@ -24,14 +24,13 @@ requirements:
     - ncurses
     - zlib
     - bzip2
-# needs libidn11 in conda-forge (also disabled in build.sh)
-#    - libidn
+    - libidn2
   run:
     - openssl
     - ncurses
     - zlib
     - bzip2
-#    - libidn
+    - libidn2
 
 test:
   commands:
