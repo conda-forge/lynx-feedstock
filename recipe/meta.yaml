@@ -1,6 +1,6 @@
 {% set name = "lynx" %}
-{% set version = "2.9.1" %}
-{% set sha256 = "a6db9b22c20df435df3757925a505531ce9a514d134742e935d71aa5c41339c5" %}
+{% set version = "2.9.2" %}
+{% set sha256 = "7374b89936d991669e101f4e97f2c9592036e1e8cdaa7bafc259a77ab6fb07ce" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   # needs curses.h, not avail on win
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
